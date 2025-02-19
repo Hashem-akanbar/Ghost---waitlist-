@@ -67,24 +67,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             margin-top: 10px;
+            gap: 15px;
         }
         .arrow {
             font-size: 24px;
             color: white;
-            position: absolute;
             animation: bounce 1s infinite alternate;
         }
-        .left {
-            left: -50px;
-        }
-        .right {
-            right: -50px;
-        }
         @keyframes bounce {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(10px); }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(5px); }
         }
         .video-section {
             margin-top: 20px;
@@ -108,9 +101,9 @@
         <div class="text-container">
             <h1>🔥 Founders Drop Coming Soon! 🔥</h1>
             <p>Be the first to access our limited edition founders collection. Sign up now and stay ahead!</p>
-            <a href="https://forms.gle/c4imt3CgLA5dE5QM9" class="btn" target="_blank">Join the waitlist</a>
             <div class="arrows">
                 <span class="arrow left">←</span>
+                <a href="https://forms.gle/c4imt3CgLA5dE5QM9" class="btn" target="_blank">Join the waitlist</a>
                 <span class="arrow right">→</span>
             </div>
         </div>
