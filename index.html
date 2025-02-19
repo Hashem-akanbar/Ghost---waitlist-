@@ -24,19 +24,28 @@
             margin-left: 20px;
         }
         .banner {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            justify-content: center;
             gap: 5px;
             width: 100%;
-            max-height: 250px;
+            max-height: 300px;
             overflow: hidden;
+            position: relative;
         }
         .banner img {
-            width: 100%;
-            height: auto;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .text-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
         }
         .container {
             padding: 40px 20px;
+            position: relative;
         }
         .btn {
             display: inline-block;
@@ -52,7 +61,7 @@
             background-color: gray;
         }
         .video-section {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .video-section video {
             width: 100%;
@@ -63,17 +72,17 @@
 </head>
 <body>
     <div class="header">
-        <img src="Close up logo.png" alt="Ghost Logo" class="logo">
+        <img src="Logo inverted.png" alt="Ghost Logo" class="logo">
     </div>
     <div class="banner">
         <img src="Standing side shot.png" alt="Look 1">
         <img src="Close up logo.png" alt="Look 2">
-        <img src="Standing side shot.png" alt="Look 3">
-        <img src="Close up logo.png" alt="Look 4">
     </div>
     <div class="container">
-        <h1>🔥 Founders Drop Coming Soon! 🔥</h1>
-        <p>Be the first to access our limited edition founders collection. Sign up now and stay ahead!</p>
+        <div class="text-container">
+            <h1>🔥 Founders Drop Coming Soon! 🔥</h1>
+            <p>Be the first to access our limited edition founders collection. Sign up now and stay ahead!</p>
+        </div>
         <a href="https://forms.gle/c4imt3CgLA5dE5QM9" class="btn" target="_blank">Join the waitlist</a>
     </div>
     <div class="video-section">
