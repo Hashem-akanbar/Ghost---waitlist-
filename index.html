@@ -34,4 +34,106 @@
       object-fit: contain;
     }
     .text-container {
-      background: rgba(0, 0
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      position: relative;
+      max-width: 80%;
+    }
+    .container {
+      padding: 40px 20px;
+      position: relative;
+    }
+    .btn {
+      display: inline-block;
+      background-color: white;
+      color: black;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .btn:hover {
+      background-color: gray;
+    }
+    .video-section {
+      margin-top: 20px;
+    }
+    .video-section img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+    #countdown {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .logo {
+        width: 100px;
+      }
+      .text-container {
+        max-width: 90%;
+        padding: 15px;
+      }
+      .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+
+  <script>
+    // Set countdown to November 1, 2025 at 12:00 PM
+    const launchDate = new Date("2025-11-01T12:00:00").getTime();
+    const countdown = () => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Launched!";
+      }
+    };
+    const timer = setInterval(countdown, 1000);
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <img src="Logo inverted.png" alt="Ghost Logo" class="logo">
+  </div>
+
+  <div class="banner">
+    <img src="Standing side shot.png" alt="Look 1">
+  </div>
+
+  <div class="container">
+    <div class="text-container">
+      <h1>🔥 Founders Drop Coming Soon! 🔥</h1>
+      <p>Be the first to access our limited edition founders collection. Sign up now and stay ahead!</p>
+      <a href="https://forms.gle/c4imt3CgLA5dE5QM9" class="btn" target="_blank">Join the waitlist</a>
+      <div id="countdown"></div>
+    </div>
+  </div>
+
+  <div class="video-section">
+    <img src="beach gif.gif" alt="Brand Video">
+  </div>
+</body>
+</html>
